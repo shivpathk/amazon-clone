@@ -1,3 +1,13 @@
+To run this application in your device , follow the following steps 
+- copy the code url and then paste in your terminal after writing git clone
+- cd shivam-amazon-clone
+- npm install
+- npm start
+now go to (http://localhost:3000)
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
