@@ -1,13 +1,63 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "AmazonEmber";
+  src: url(./assets/fonts/AmazonEmber_Rg.ttf);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* custome classes for tailwind start */
+@layer components {
+  .navbar_list_item {
+    @apply mr-2 font-semibold transition-all duration-300 cursor-pointer border border-transparent rounded-md hover:border-white py-1 px-1 md:px-2;
+  }
+  .dropdown_item {
+    @apply flex items-center p-1 pr-5 hover:bg-amazon_yellow hover:text-white whitespace-nowrap transition-all duration-200;
+  }
+  .sidebar_header {
+    @apply font-semibold text-lg pl-10 pt-3 mb-1;
+  }
+  .sidebar_list {
+    @apply list-none text-sm border-b border-gray-300;
+  }
+  .sidebar_list_item {
+    @apply pr-5 pl-10 py-4 cursor-pointer transition-all hover:bg-gray-200;
+  }
+  .flex_between {
+    @apply flex items-center justify-between;
+  }
+  .footer_list_item {
+    @apply mb-2 cursor-pointer hover:underline w-max text-gray-300;
+  }
+  .footer_info {
+    @apply mr-2 mb-1 sm:mb-0 border border-gray-300 px-3 py-2 text-sm rounded flex items-center;
+  }
+  .footer_sm_items {
+    @apply first-line:font-bold first-line:text-white mr-5 mb-5 cursor-pointer hover:underline opacity-90;
+  }
+  .loading {
+    @apply w-full h-full flex items-center justify-center after:absolute after:border-20 after:border-transparent after:border-b-amazon_yellow before:absolute before:border-20 before:border-transparent before:border-b-amazon_yellow before:animate-rotateA after:rotate-90 after:animate-rotateB;
+  }
+  .basket_btn {
+    @apply py-1.5 text-xs lg:text-sm rounded bg-gradient-to-b transition-all duration-300 from-amber-100 to-amber-400 border border-amber-300 hover:opacity-80 w-full my-3;
+  }
+  .btn_loading {
+    @apply w-4 h-4 bg-slate-100 rounded-full inline-block;
+  }
+  .clear_btn {
+    @apply bg-red-500 text-white py-2 px-28 rounded-sm transition-all duration-300 hover:rounded-md;
+  }
+}
+/* costume classes for tailwind end */
+
+body {
+  margin: 0;
+  font-family: AmazonEmber;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+* {
+  scroll-behavior: smooth;
 }
