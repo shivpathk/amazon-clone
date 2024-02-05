@@ -81,7 +81,7 @@ function Sidebar() {
                   </Link>
                 </li>
                 <li className='sidebar_list_item'>
-                  <button onClick={!user ? () => loginWithRedirect() : () => logout()}>{user ? "Sign out" : "Sign in"}</button>
+                  <button onClick={!user ? () => loginWithRedirect() : () => logout({ logoutParams: { returnTo: window.location.origin } })}>{user ? "Sign out" : "Sign in"}</button>
                 </li>
               </ul>
             </div>

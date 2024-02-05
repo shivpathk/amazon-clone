@@ -95,7 +95,7 @@ function NavbarTop() {
           />
         </div>
         {/* Sign in */}
-        <button className='flex flex-col text-sm leading-4 mr-3 p-2' onClick={!user ? () => loginWithRedirect() : () => logout()}>
+        <button className='flex flex-col text-sm leading-4 mr-3 p-2' onClick={!user ? () => loginWithRedirect() : () => logout({ logoutParams: { returnTo: window.location.origin } })}>
           Hello, {user ? user.name : "User"} <span className='font-bold'>Sign {user ? "out" : "in"}</span>
         </button>
         {/* Orders */}
