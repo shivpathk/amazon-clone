@@ -36,7 +36,7 @@ function BasketCard({ title, price, category, description, image, rating, i }) {
 
           <p className='my-2 line-clamp-2 text-gray-700'>{description}</p>
 
-          <h1 className='mt-5 mb-3 font-bold'>$ {price}</h1>
+          <h1 className='mt-5 mb-3 font-bold'>₹ {price}</h1>
         </div>
 
         {/* Buttons */}
