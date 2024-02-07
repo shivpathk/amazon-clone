@@ -46,8 +46,8 @@ function Product({ id, title, price, category, description, image, rating, i }) 
         <div>
           {Array(Math.ceil(rating.rate))
             .fill()
-            .map((_) => (
-              <span key={Math.random() * 20}>
+            .map(() => (
+              <span>
                 <StarOutlinedIcon className='text-yellow-500' style={{ fontSize: "1.2rem" }} />
               </span>
             ))}
