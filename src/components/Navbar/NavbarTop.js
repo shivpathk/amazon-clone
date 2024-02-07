@@ -1,5 +1,5 @@
 // React router
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 // Redux
 import { useSelector } from "react-redux";
 import { selectItems } from "../../features/basket";
@@ -17,6 +17,7 @@ import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 
 function NavbarTop() {
 
+  const navigate = useNavigate()
   const { loginWithRedirect, logout, user } = useAuth0();
 
   // Accessing redux
@@ -78,7 +79,7 @@ function NavbarTop() {
             type='text'
             placeholder='Search in Amazon ...'
           />
-          <button className='bg-amazon_yellow hover:bg-amazon_yellow-dark rounded-r ml-auto p-1 md:p-2 transition-all duration-300'>
+          <button className='bg-amazon_yellow hover:bg-amazon_yellow-dark rounded-r ml-auto p-1 md:p-2 transition-all duration-300' onClick={()=>navigate('/')}>
             <SearchIcon style={{ fontSize: "1.8rem" }} />
           </button>
         </form>
