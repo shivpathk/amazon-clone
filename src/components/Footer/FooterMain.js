@@ -4,6 +4,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 // MUI
 import LanguageIcon from "@mui/icons-material/Language";
+import CopyrightIcon from "@mui/icons-material/Copyright";
 
 function FooterMain() {
   return (
@@ -74,6 +75,12 @@ function FooterMain() {
             />
             India
           </li>
+         <li className='flex items-center' title='https://shiv-pathk-portfolio.netlify.app/'>
+           <CopyrightIcon style={{ fontSize: "1.2rem" }} />
+           <a href='https://shiv-pathk-portfolio.netlify.app/' target='_blank' rel='noreferrer'>
+             2024 Designed by Shivam Kumar
+           </a>
+         </li>
         </ul>
       </div>
     </div>

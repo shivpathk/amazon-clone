@@ -15,8 +15,6 @@ function Footer() {
       >
         Back to top
       </button>
-
-      {/* Footer middle */}
       <FooterMain />
     </div>
   );
